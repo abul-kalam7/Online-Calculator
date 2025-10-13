@@ -1,14 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-}
-
+} 
  .con{
-    width: 240px;
-    height: 300px;
+    width: 25vw;
+    height: 50vh;
     background-color: rgb(133, 133, 133);
     padding: 10px;
-    margin: 4px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);
  }
 
  table{
@@ -29,8 +31,8 @@
 
  .button{
     background-color: white;
-    width: 58px;
-    height: 42px;
+    width: 5.73vw;
+    height: 6.5vh;
     border-radius: 5px;
     border: 1px solid rgba(83, 95, 119, 0.705);
     font-size: 23px;
@@ -38,3 +40,56 @@
     color: rgba(36, 36, 36, 0.925);
     box-shadow: inset 2px 5px 18px rgb(207, 207, 207) ;
  }
+
+@media (max-width: 1024px) {
+   .con{ 
+      box-sizing: border-box;
+      width: 32vw;
+      height: 50vh;
+      margin: 20px auto ;
+
+   }
+   .button{
+      width: 9.6vmin;
+      height: 6vmin;
+   }
+}
+@media (max-width: 768px) {
+   .con{ 
+      box-sizing: border-box;
+      width: 43vw;
+      height: 50vh;
+      margin: 20px auto ;
+
+   }
+   .button{
+      width: 9.8vmin;
+      height: 6vmin;
+   }
+}
+@media (max-width: 425px) {
+   .con{ 
+      box-sizing: border-box;
+      width: 70vw;
+      height: 50vh;
+      margin: 20px auto ;
+
+   }
+   .button{
+      width: 15.6vmin;
+      height: 10vmin;
+   }
+}
+@media (max-width: 375px) {
+   .con{ 
+      box-sizing: border-box;
+      width: 80vw;
+      height: 50vh;
+      margin: 20px auto ;
+
+   }
+   .button{
+      width: 17.8vmin;
+      height: 12vmin;
+   }
+}
