@@ -72,7 +72,7 @@ input:focus {
 .history {
    position: absolute; 
    background-color: rgba(182, 51, 51, 0);
-   height: 28vh;
+   height: 25vh;
    width: 94vw; 
    text-align: right;
    margin-bottom: 5px; 
@@ -83,7 +83,7 @@ input:focus {
 .history p{
    font-size: 15px;
    padding: 2px 1px;
-   color: rgba(173, 173, 173, 0.349);
+   color: rgba(173, 173, 173, 0.301);
    font-weight: 550;
    font-family: sans-serif;
 }
@@ -91,7 +91,7 @@ input:focus {
 @media (max-width: 375px) and (min-width: 321px) {
    .history{
       width: 92vw;
-      height: 26vh;
+      height: 23vh;
    }
    .all {
       justify-content: center;
@@ -111,7 +111,7 @@ input:focus {
 @media (min-width: 425px) {
    .history{
       width: 88vw;
-      height: 25vh;
+      height: 21vh;
       text-align: end;
    }
    .all {
