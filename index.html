@@ -9,48 +9,43 @@
 </head>
 
 <body>
-    <div class="con">
-        <table>
-            <tr>
-                <input type="text" oninput="this.value = this.value.replace(/[^0-9+\-*/().]/g, '')"
-                    placeholder="0" value="" class="input" name="input" id="input" >
-                
-            </tr>
-            <tr>
-                <td><button class="button nac">AC</button></td>
-                <td><button class="button nc">C</button></td>
-                <td><button class="button n100">%</button></td>
-                <td><button class="button ndi">/</button></td>
-            </tr>
-            <tr>
-                <td><button class="button n7">7</button></td>
-                <td><button class="button n8">8</button></td>
-                <td><button class="button n9">9</button></td>
-                <td><button class="button nma">*</button></td>
-            </tr>
-            <tr>
-                <td><button class="button n4">4</button></td>
-                <td><button class="button n5">5</button></td>
-                <td><button class="button n6">6</button></td>
-                <td><button class="button nsu">-</button></td>
-            </tr>
-            <tr>
-                <td><button class="button n1">1</button></td>
-                <td><button class="button n2">2</button></td>
-                <td><button class="button n3">3</button></td>
-                <td><button class="button npl">+</button></td>
-            </tr>
-            <tr>
-                <td><button class="button n0">0</button></td>
-                <td><button class="button n00">00</button></td>
-                <td><button class="button ndo">.</button></td>
-                <td><button class="button neq">=</button></td>
-            </tr>
+    <div class="history"> 
+    </div>
+    <div class="all">
+        
+        <div class="cal">
+        <input autocomplete="off" type="text" oninput="this.value = this.value.replace(/[^0-9+\-*/().]/g, '')"
+        placeholder="0" value="" class="input" name="input" id="input">
+        
+        <div class="btnCon">
+            <button class="button nac">AC</button>
+            <button class="button nc">C</button>
+            <button class="button n100">%</button>
+            <button class="button ndi">/</button>
 
-        </table>
+            <button class="button n7">7</button>
+            <button class="button n8">8</button>
+            <button class="button n9">9</button>
+            <button class="button nma">*</button>
+
+            <button class="button n4">4</button>
+            <button class="button n5">5</button>
+            <button class="button n6">6</button>
+            <button class="button nsu">-</button>
+
+            <button class="button n1">1</button>
+            <button class="button n2">2</button>
+            <button class="button n3">3</button>
+            <button class="button npl">+</button>
+
+            <button class="button n0">0</button>
+            <button class="button n00">00</button>
+            <button class="button ndo">.</button>
+            <button class="button neq">=</button>
+        </div>
     </div>
 
-
+</div>
     <script src="script.js"></script>
 </body>
 

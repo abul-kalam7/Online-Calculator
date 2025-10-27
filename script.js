@@ -2,7 +2,6 @@ window.addEventListener("DOMContentLoaded", () => {
   input.focus(); // automatically focus the input field
 });
 
-
 const input = document.querySelector(".input")
 const nac = document.querySelector(".nac")
 const nc = document.querySelector(".nc")
@@ -25,12 +24,17 @@ const n1 = document.querySelector(".n1")
 const n0 = document.querySelector(".n0")
 const n00 = document.querySelector(".n00")
 
+if(input.value === ""){
+    neq.disabled = true;
+}
+
 n0.addEventListener("click", () => {
     input.value += "0";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
 n00.addEventListener("click", () => {
     input.value += "00";
@@ -38,80 +42,80 @@ n00.addEventListener("click", () => {
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n1.addEventListener("click", () => {
     input.value += "1";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n2.addEventListener("click", () => {
     input.value += "2";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n3.addEventListener("click", () => {
     input.value += "3";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n4.addEventListener("click", () => {
     input.value += "4";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n5.addEventListener("click", () => {
     input.value += "5";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n6.addEventListener("click", () => {
     input.value += "6";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n7.addEventListener("click", () => {
     input.value += "7";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n8.addEventListener("click", () => {
     input.value += "8";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 n9.addEventListener("click", () => {
     input.value += "9";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 nac.addEventListener("click", () => {
     input.value = "";
     npl.disabled= false;
@@ -119,17 +123,15 @@ nac.addEventListener("click", () => {
     nma.disabled= false;
     ndi.disabled= false;
 })
-
 nc.addEventListener("click", () => {
     if(input !== ""){
-       input.value = input.value.slice(0, -1);
+        input.value = input.value.slice(0, -1);
     }
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
 })
-
 n100.addEventListener("click", () => {
     if(input !== ""){
         input.value = input.value / 100;
@@ -139,37 +141,37 @@ n100.addEventListener("click", () => {
     nma.disabled= false;
     ndi.disabled= false;
 })
-
 ndo.addEventListener("click", () => {
     input.value += ".";
     npl.disabled= false;
     nsu.disabled= false;
     nma.disabled= false;
     ndi.disabled= false;
+    neq.disabled = false;
 })
-
 ndi.addEventListener("click", () => {
     input.value += "/";
     ndi.disabled= true;
     n100.disabled = true;
+    neq.disabled = false;
 })
-
 nma.addEventListener("click", () => {
     input.value += "*";
     nma.disabled= true;
     n100.disabled = true;
+    neq.disabled = false;
 })
-
 nsu.addEventListener("click", () => {
     input.value += "-";
     nsu.disabled= true;
     n100.disabled = true;
+    neq.disabled = false;
 })
-
 npl.addEventListener("click", () => {
     input.value += "+";
     npl.disabled= true;
     n100.disabled = true;
+    neq.disabled = false;
 })
 
 function checkLast () {
@@ -182,13 +184,16 @@ function checkLast () {
 
 neq.addEventListener("click", () => { 
     checkLast()
+    let p = document.createElement("p")
+    const history = document.querySelector(".history")
+    history.appendChild(p)
     if(input !== ""){
+        p.innerText = input.value;
         input.value = eval(input.value)
+        p.innerText += " = " + input.value;
     }
     n100.disabled = false; 
 })
-
-
 
 input.addEventListener("keydown", (event) => {
     if(event.key === "Delete"){
@@ -198,7 +203,6 @@ input.addEventListener("keydown", (event) => {
     nma.disabled= false;
     ndi.disabled= false;
     }
-   
 })
 
 input.addEventListener("keydown", (event) => {
