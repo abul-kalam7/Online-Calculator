@@ -207,9 +207,14 @@ input.addEventListener("keydown", (event) => {
 
 input.addEventListener("keydown", (event) => {
     if(event.key === "Enter"){
-    checkLast()
+          checkLast()
+    let p = document.createElement("p")
+    const history = document.querySelector(".history")
+    history.appendChild(p)
     if(input !== ""){
+          p.innerText = input.value;
         input.value = eval(input.value)
+        p.innerText += " = " + input.value;
     }
     n100.disabled = false; 
     }
